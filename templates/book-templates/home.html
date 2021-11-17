@@ -1,0 +1,21 @@
+{% extends '_base.html' %}
+
+{% block content %}
+
+<div class="container-fluid">
+    <div class="col">
+        <div class="row align-items-center justify-content-center">
+            {% for book in object_list %}
+            <div class="card m-3" style="width: 18rem;">
+                <img src="{{book.image_src}}" style="height:150px; "class="card-img-top pt-3" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">{{book.title}}</h5>
+                  <p class="card-text">{{book.description}}</p>
+                </div>
+              </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+{% endblock %}
